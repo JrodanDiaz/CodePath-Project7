@@ -1,4 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Girassol&display=swap");
+
+:root {
+  --lightgreen: #606557;
+  --darkgreen: #354b34;
+  --wine: #5c0000;
+  --darkwine: #3f0000;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  /* font-family: "Cardo", serif; */
+  font-family: "Girassol", serif;
+  color: white;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/* Utility Classes */
+
+.contain-img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Home and Child Components */
+
+.HomeScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.HomeScreen-body {
+  padding: 1.5rem;
+}
+
+.HomeScreen h1 {
+  font-size: 6rem;
+}
+
+.HomeScreen h2 {
+  font-family: "Cardo", serif;
+  font-size: 3rem;
+}
+
+.HomeScreen span {
+  font-family: "Girassol", serif;
+  font-weight: 900;
+  color: #ab0000;
+}
+
+#contestants {
+  max-width: 60%;
+  height: auto;
+  padding: 2.5rem 0px;
+}
+
+/* Sidebar and Children */
+
+.Sidebar {
+  width: 250px;
+  background-color: #606557;
+}
+
+.Sidebar-Content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.Sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Sidebar li {
+  padding: 1rem 1rem;
+}
+
+.sidebar-link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s;
+}
+
+.sidebar-link:hover {
+  color: var(--wine);
+}
+
+/* CREATION and children */
+
+.Creation {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Creation > h1 {
+  font-size: 3rem;
+}
+
+.Creation-body {
+  height: 80%;
+  width: 90%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CreationInput {
+  background-color: var(--darkgreen);
+  border: 3px solid var(--wine);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.creationlist li {
+  color: white;
+}
+
+.txt-input {
+  text-transform: capitalize;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1rem;
+}
+
+.radio-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0px 0.5rem;
+  background-color: var(--darkgreen);
+  margin-bottom: 10px;
+}
+
+.radio-container {
+  border: 3px solid #5c0000;
+}
+
+.Creation-input-container {
+  width: 35%;
+}
+
+.Creation-img-container {
+  height: 80%;
+  width: 30%;
+  margin: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contestant-img {
+  max-width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+#submit-btn {
+  background-color: var(--wine);
+  padding: 20px 40px;
+  border: 1px solid white;
+  font-size: 3rem;
+  /* margin-right: 3rem; */
+  font-family: "Girassol", serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.CreationStyle {
+  background-color: var(--darkgreen);
+  border: 2px solid var(--wine);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.CreationStyle-horizontal {
+  background-color: var(--darkgreen);
+  border: 2px solid var(--wine);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.CreationStyle-label {
+  font-size: 2rem;
+}
+
+/* CONTESTANTGALLERY AND CHILDREN */
+
+.ContestantGallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+}
+
+.ContestantGallery > h1 {
+  font-size: 5rem;
+}
+
+.ContestantGallery-Body {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  border: 2px solid var(--wine);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ContestantCard {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--darkgreen);
+  border: 4px solid var(--wine);
+  transition: background-color 500ms;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ContestantCard h1 {
+  text-decoration: none;
+  color: white;
+}
+
+.ContestantCard:hover {
+  background-color: var(--wine);
+}
+
+.gallery-img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 15px;
+}
+
+/* ContestantDetails */
+
+.ContestantDetails {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.ContestantDetails > h1 {
+  font-size: 3rem;
+}
+
+.ContestantDetails-Body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContestantDetails-Img {
+  width: 500px;
+  height: 700px;
+  /* border: 3px solid var(--wine); */
+}
+
+.ContestantDetails-Text {
+  height: 700px;
+  width: 400px;
+  background-color: var(--darkgreen);
+  border: 3px solid var(--wine);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ContestantDetails-Text span {
+  color: var(--darkwine);
+}
+
+.primary-btn {
+  background-color: var(--wine);
+  border: 1px solid white;
+  padding: 20px 40px;
+  font-family: "Girassol", serif;
+  font-size: 3rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.EditContestant {
+  height: 100%;
+  width: 100%;
+}
+
+.EditRadioContainer-Vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.DetailsBtnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.edit-input {
+  padding: 2px 4px;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.ContestantDetails-Strength {
+  width: 400px;
+  height: max-content;
+  padding: 20px;
+  background-color: var(--darkgreen);
+  border: 3px solid var(--wine);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContestantDetails-Strength span {
+  color: var(--darkwine);
+}
+
+.ContestantDetails-Strength h1 {
+  font-family: "Cardo", serif;
 }

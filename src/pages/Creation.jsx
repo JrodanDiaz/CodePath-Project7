@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import supabase from "../supabase";
 import CreationInput from "../components/CreationInput";
-import CreationRadioInput from "../components/CreationRadioInput";
+import CreationRadioNames from "../components/CreationRadioNames";
 import CreationRadioStyle from "../components/CreationRadioStyle";
 import ContestantImage from "../components/ContestantImage";
 
@@ -55,7 +55,7 @@ export default function Creation() {
         <h1>CREATION IS UPON YOU</h1>
         <div className="Creation-body">
           <div className="Creation-input-container">
-            <CreationRadioInput setContestant={setContestant} />
+            <CreationRadioNames setContestant={setContestant} />
           </div>
 
           {/* Conditionally Render Image */}
