@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 export default function CreationRadioStyle({
   setContestant,
   toggleIsMagicActive,
@@ -17,7 +16,6 @@ export default function CreationRadioStyle({
     setContestant((prevContestant) => {
       return { ...prevContestant, [field]: e.target.value };
     });
-    console.log(e.target.value);
   };
 
   return (
