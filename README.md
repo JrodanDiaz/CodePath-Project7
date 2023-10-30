@@ -26,6 +26,12 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of the web app:
+![WalkthroughCodePathProject7](https://github.com/JrodanDiaz/CodePath-Project7/assets/129818825/72d78a98-cdc1-432f-9008-88b954781c57)
+
+Here's the landing page of the web app, since it was cut off from the gif:
+
+![TerminaHomeScreen](https://github.com/JrodanDiaz/CodePath-Project7/assets/129818825/62aa622d-3600-4668-bf96-78abe7e97459)
+
 
 GIF created with LiceCap
 
